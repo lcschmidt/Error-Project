@@ -25,8 +25,8 @@ p = 1;
 q = 1;
 
 alldata = rinexv3_1028.data;
-f1 = 1575.42*1e6;
-f2 = 1227.60*1e6;
+f1 = 1575.42*1e6;   % (Hz)
+f2 = 1227.60*1e6;   % (Hz)
 
 while i <= length(alldata)
     if alldata(i,3) == 2
@@ -68,10 +68,15 @@ while i <= length(alldata)
     i = i + 1;
 end
 
-plot(timesecsprn2, prn_2_data(:,4))
+% Plot carrier phase data.
+plot(timesecsprn2, prn_2_data(:,4)) % L1
 figure;
-plot(timesecsprn2, prn_2_data(:,5))
+plot(timesecsprn2, prn_2_data(:,5)) % L2
+
+% Plot pseudorange.
 figure;
-plot(timesecsprn2, prn_2_data(:,7))
+plot(timesecsprn2, prn_2_data(:,7)) % C1
+
+% Plot MP1, MP2.
 figure;
-plot(timesecsprn2, mp1prn2 - mean(mp1prn2))
+plot(timesecsprn2, mp1prn2 - mean(mp1prn2)) % Multipath1 for PRN2
