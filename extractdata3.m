@@ -24,7 +24,7 @@ n = 1;
 p = 1;
 q = 1;
 
-alldata = rinexv3_1028.data;
+alldata = rinexv3_nybp1028.data;
 f1 = 1575.42*1e6;   % (Hz)
 f2 = 1227.60*1e6;   % (Hz)
 
